@@ -1,4 +1,5 @@
-#Slideshow
+# Slideshow
+
 This script creates xml wallpapers that behave in the same way as the slideshow in Windows.
 To use the need to do the command:
 
