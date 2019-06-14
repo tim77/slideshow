@@ -1,6 +1,7 @@
 import argparse
 parser = argparse.ArgumentParser(description='Process some integers.',
-		prog="my")
+prog="my")
 parser.add_argument('--foo', help='foo help')
-args = parser.parse_args()
-//TODO:learn the argparse
+parser.add_argument('-t',help='time to display')
+args = parser.parse_args[1]
+print(args)
