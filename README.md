@@ -7,10 +7,6 @@ To use the need to do the command:
 
 ```cd my_bin```
 
-And take execution flags for script:
-
-```chmod +x slideshow.py```
-
 and run:
 
 ```./slideshow.py -p /path/to/dir -o /path/to/file/xml -d N```
