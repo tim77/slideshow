@@ -7,6 +7,7 @@ import datetime
 import argparse
 #Объявим глобальные переменные
 global xml_file_folder
+global xml_file
 global watching_directory
 #Проверяем количество ключей и задаем глобальные переменные
 def parsing_arguments():
@@ -24,8 +25,7 @@ def dir_exist(path):
 	else:
 		return False
 def is_xml(path):
-	if path.rfind('.xml')>-1 and path.rfind('.xml')+4==len(path) and dir_exist(xml_folder(path)):
-		xml_file_folder=xml_folder(path)
+	if os.path.exists(os.path.dirname(path)) and os.path.splitext(path)[1]=='.xml':
 		return True
 	else:
 		return False
@@ -36,3 +36,4 @@ def xml_folder(path):
 		pat=os.getcwd()
 	return pat
 print (parsing_arguments())
+print(is_xml(parsing_arguments().o))
