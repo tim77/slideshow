@@ -9,10 +9,15 @@ import argparse
 global xml_file_folder
 global watching_directory
 #Проверяем количество ключей и задаем глобальные переменные
-def check_key():
-	parser = argparse.ArgumentParser(description='
-def help():
-	print("We are input incorrect data. Please check this:\nslideshow /path/to/directory /path/to/xml/file [Optional parametrs]\nCheck the optional parameters(necessarily with value)\n\t--duration, -d seconds - time to change wallpaper\n\t--transition, -t time seconds - wallpaper change time\n\t--amount, -a - amount of wallpaper")
+def parsing_arguments():
+	parser = argparse.ArgumentParser(description='This script make xml wallpaper.',prog='slideshow')
+	parser.add_argument('-p',type=str,help='path to catalog with images',
+	metavar='/path/to/dir')
+	parser.add_argument('-o',type=str,metavar='/path/to/file.xml',help='path to output xml files')
+	parser.add_argument('-d',type=int,metavar='N',help='time display wallpaper')
+	parser.add_argument('-t',type=int,metavar='N',help='time to transition from current to next wallpaper')
+	args=parser.parse_args()
+	return args
 def dir_exist(path):
 	if os.path.exists(path) and os.path.isdir(path):
 		return True
@@ -30,4 +35,4 @@ def xml_folder(path):
 	else:
 		pat=os.getcwd()
 	return pat
-check_key()
+print (parsing_arguments())
