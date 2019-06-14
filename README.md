@@ -3,7 +3,7 @@
 This script creates xml wallpapers that behave in the same way as the slideshow in Windows.
 To use the need to do the command:
 
-```git clone https://github.com/ivan-tretyak/my_bin.git ```
+```git clone https://github.com/ivan-tretyak/slideshow.git ```
 
 ```cd my_bin```
 
